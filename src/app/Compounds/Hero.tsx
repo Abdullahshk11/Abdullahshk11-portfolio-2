@@ -24,6 +24,11 @@ interface DeveloperConfig {
   buildApp: () => string;
 }
 
+interface HeroSectionProps {
+  style?: React.CSSProperties;
+  className?: string;
+}
+
 const TECH_STACK: TechStackItem[] = [
   { id: '1', name: 'React / Next.js' },
   { id: '2', name: 'Node.js' },
@@ -46,9 +51,12 @@ const DEVELOPER_DATA: DeveloperConfig = {
   buildApp: () => 'Frontend UI + Backend API + Database',
 };
 
-export const HeroSection: React.FC = () => {
+export const HeroSection: React.FC<HeroSectionProps> = ({ style, className }) => {
   return (
-    <section className="relative min-h-screen bg-[#092328] text-slate-100 flex items-center justify-center overflow-hidden px-6 py-20">
+    <section
+      className={`relative min-h-screen bg-[#092328] text-slate-100 flex items-center justify-center overflow-hidden px-6 py-20 ${className ?? ""}`.trim()}
+      style={style}
+    >
       
       {/* Background Glow Effects */}
       <div 
