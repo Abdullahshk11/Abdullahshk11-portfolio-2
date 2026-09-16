@@ -1,8 +1,30 @@
 "use client"
 
 import Link from "next/link"
+import { useState } from 'react';
 
 const Contact = () => {
+    const [result, setResult] = useState("");
+
+  const onSubmit = async (event:any) => {
+    event.preventDefault();
+    setResult("Sending....");
+    const formData = new FormData(event.target);
+    formData.append("access_key", "042f225c-6efe-49f3-ada1-43d76d790bed");
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData
+    });
+
+    const data = await response.json();
+    if (data.success) {
+      setResult("Form Submitted Successfully");
+      event.target.reset();
+    } else {
+      setResult("Error");
+    }
+  };
   return (
     <section className="grid w-full gap-10 bg-slate-950 px-6 py-16 text-white md:grid-cols-2 md:px-12 lg:px-24">
       <div className="flex flex-col justify-center gap-6">
@@ -42,7 +64,8 @@ const Contact = () => {
         </div>
       </div>
 
-      <form className="flex flex-col gap-5" action="mailto:you@example.com" method="post" encType="text/plain">
+      <form className="flex flex-col gap-5" onSubmit={onSubmit}>
+          <input type="hidden" name="042f225c-6efe-49f3-ada1-43d76d790bed" value="042f225c-6efe-49f3-ada1-43d76d790bed"></input>
         <label className="flex flex-col gap-2">
           <span className="font-semibold">Email</span>
           <input
