@@ -1,0 +1,57 @@
+.skills-section {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;      /* rows ko vertically/horizontally center karega */
+  justify-content: center;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 1200px;        /* apni site ke container width ke hisab se adjust karein */
+  margin: 0 auto;           /* section ko page ke center mein le aayega */
+  padding: 0 1rem;
+}
+
+.marquee-wrapper {
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  justify-content: center;  /* row ke andar items center se start hon */
+}
+.marquee-track {
+  display: flex;
+  gap: 2rem;
+  width: max-content;
+}
+
+.skill-item {
+  white-space: nowrap;
+  padding: 0.5rem 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 999px;
+}
+
+/* Line 1: continuous left movement */
+.marquee-left {
+  animation: scrollLeft 30s linear infinite;
+
+}
+
+/* Line 2: continuous right movement */
+.marquee-right {
+  animation: scrollRight 30s linear infinite;
+}
+
+/* Pause on hover */
+.marquee-wrapper:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+@keyframes scrollLeft {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@keyframes scrollRight {
+  from { transform: translateX(-50%); }
+  to { transform: translateX(0); }
+}
