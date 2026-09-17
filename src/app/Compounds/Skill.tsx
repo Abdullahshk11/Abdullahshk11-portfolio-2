@@ -5,7 +5,7 @@ export default function SkillsSection() {
   const skillsRow2 = ["HTML", "CSS","Bootstrap", "JavaScript", "Node.js", "Express", "React", "MongoDB", "Next.Js", "Tailwindcss", "Git"];
 
   return (
-    <section className="skills-section">
+    <section className="skills-section bg-black text-white w-full">
       {/* Line 1 - moves left */}
       <div className="marquee-wrapper">
         <div className="marquee-track marquee-left">

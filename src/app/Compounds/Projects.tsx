@@ -8,7 +8,7 @@ import Link from 'next/link';
 const Projects = () => {
     return (
         <>
-            <section className='flex w-full flex-col items-center gap-6 bg-[#114631] p-4 text-center sm:flex-row sm:justify-around sm:p-6 sm:text-left'>
+            <section className='flex w-full flex-col items-center gap-6 bg-[#114631] p-4 text-center sm:flex-row sm:justify-around sm:p-6 sm:text-left text-white'>
                 <div className="w-full max-w-md sm:flex-1">
                     <h3 className='text-2xl font-bold sm:text-3xl'>Mern-Stack</h3>
                     <p className="mt-3">A full-stack shopping website with a responsive frontend and connected backend.</p>
@@ -32,7 +32,7 @@ const Projects = () => {
                 </div>
             </section>
             <div className="h-1 w-full bg-[#2A835F]" />
-            <section className='flex w-full flex-col items-center gap-6 bg-[#114631] p-4 text-center sm:flex-row sm:justify-around sm:p-6 sm:text-left'>
+            <section className='flex w-full flex-col items-center gap-6 bg-[#114631] p-4 text-center sm:flex-row sm:justify-around sm:p-6 sm:text-left text-white'>
                 <div className="flex w-full max-w-md flex-col gap-3 sm:flex-1">
                     <Image
                         src="/Coffie-shop.png"
@@ -56,7 +56,7 @@ const Projects = () => {
                 </div>
             </section>
             <div className="h-1 w-full bg-[#2A835F]" />
-             <section className='flex w-full flex-col items-center gap-6 bg-[#114631] p-4 text-center sm:flex-row sm:justify-around sm:p-6 sm:text-left'>
+             <section className='flex w-full flex-col items-center gap-6 bg-[#114631] p-4 text-center sm:flex-row sm:justify-around sm:p-6 sm:text-left text-white'>
                 <div className="w-full max-w-md sm:flex-1">
                     <h3 className='text-2xl font-bold sm:text-3xl'>Mytask - Todo app</h3>
                     <p className="mt-3">A simple todo app for creating, tracking, and managing daily tasks in one place.</p>
@@ -80,7 +80,7 @@ const Projects = () => {
                 </div>
             </section>
                 <div className="h-1 w-full bg-[#2A835F]" />
-                 <section className='flex w-full flex-col items-center gap-6 bg-[#114631] p-4 text-center sm:flex-row sm:justify-around sm:p-6 sm:text-left'>
+                 <section className='flex w-full flex-col items-center gap-6 bg-[#114631] p-4 text-center sm:flex-row sm:justify-around sm:p-6 sm:text-left text-white'>
                      <div className="flex w-full max-w-md flex-col gap-3 sm:flex-1 bg-[#114631]">
                     <Image
                         src="/gym.png"
